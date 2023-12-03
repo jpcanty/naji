@@ -1,0 +1,20 @@
+.nav-container {
+  background-color: #282c34;
+  display: flex; 
+  justify-content: space-between;
+}
+.nav-left, .nav-right {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-left > *, .nav-right > * {
+  margin: 10px;
+}
+
+.nav-left > .nav-link {
+  font-size: 16px;
+  padding: 4px 0px 0px 0px;
+  text-decoration: none; 
+  color: white; 
+}
