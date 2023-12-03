@@ -8,7 +8,7 @@ import { FullscreenNav } from "./FullscreenNav";
 export const Navbar = () => {
   const { width } = useWindowDimensions();
   const [showDropdown, setShowDropdown] = useState(false);
-  const isLarge = width > 834;
+  const isLarge = width > 800;
   return (
     <nav>
       {isLarge ? (
