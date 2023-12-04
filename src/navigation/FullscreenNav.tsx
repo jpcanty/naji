@@ -16,7 +16,7 @@ export const FullscreenNav = ({ onClick }: Props) => {
       </div>
 
       {navigationLinks.map((link) => {
-            return <p><a className="nav-link" href={link.href}>{link.title}</a></p>;
+            return <p key={link.title}><a className="nav-link"  href={link.href}>{link.title}</a></p>;
           })}
     </div>
   );
