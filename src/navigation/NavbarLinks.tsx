@@ -8,7 +8,7 @@ export const NavbarLinks = () => {
       <div className="nav-left">
         <HomeIcon />
           {navigationLinks.map((link) => {
-            return <a className="nav-link" href={link.href}>{link.title}</a>;
+            return <a className="nav-link" key={link.title} href={link.href}>{link.title}</a>;
           })}
       </div>
       <div className="nav-right">
