@@ -2,7 +2,7 @@ import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { User } from "./pages/User";
+import { CurrentUser } from "./features/currentUser/CurrentUser";
 import { Navbar } from "./navigation/Navbar";
 import { Pics } from "./pages/Pics";
 import Parse from "parse";
@@ -26,7 +26,7 @@ function App() {
     },
     {
       path: "/user",
-      element: <User />,
+      element: <CurrentUser />,
     },
     {
       path: "/pics",

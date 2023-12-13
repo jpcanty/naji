@@ -1,5 +1,6 @@
 import Parse from "parse";
 
 export const useGetCurrentUser = () => {
-    return Parse.User.current();
+    const currentUser = Parse.User.current();
+    return currentUser ? {username: currentUser?.getUsername(), email:currentUser?.getEmail()} : undefined;
 }

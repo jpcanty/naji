@@ -1,7 +1,18 @@
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
+import { initUser } from "../features/currentUser/currentUserSlice";
+import { useGetCurrentUser } from "../hooks/useGetCurrentUser";
+
 export const UserIcon = () => {
   const light = true;
+  const dispatch = useAppDispatch();
+  const currentUser = useAppSelector((state) => state.currentUser.value);
+  useEffect(() => {
+    dispatch(initUser(useGetCurrentUser()));
+  }, []);
   return (
-    <a href="/user" className="home-icon">
+    <a href="/user" className="user-icon">
+      {currentUser?.username}
       {light ? (
         <svg
           width="25px"

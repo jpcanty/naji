@@ -1,12 +1,17 @@
-import { initUser, logout } from "../features/currentUser/currentUserSlice";
-import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
-import { useLogout } from "../hooks/useLogOut";
-import { useSignUp } from "../hooks/useSignUp";
+import { useEffect } from "react";
+import { initUser, logout } from "./currentUserSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { useGetCurrentUser } from "../../hooks/useGetCurrentUser";
+import { useLogout } from "../../hooks/useLogOut";
+import { useSignUp } from "../../hooks/useSignUp";
 import logo2 from "../logo2.svg";
 
-export const User = () => {
+export const CurrentUser = () => {
   const dispatch = useAppDispatch();
   const currentUser = useAppSelector((state) => state.currentUser.value);
+  useEffect(() => {
+    dispatch(initUser(useGetCurrentUser()))
+  }, []); 
   const email = currentUser?.email ?? "no email";
 
   const onSignUp = () => {
@@ -20,11 +25,10 @@ export const User = () => {
     });
   };
   return (
-    <header className="App-header">
+    <div className="page">
       <h1>{email}</h1>
       <button onClick={onSignUp}>Sign up</button>
       <button onClick={onLogout}>Log out</button>
-      <img src={logo2} className="App-logo" alt="app-logo" />
-    </header>
+    </div>
   );
 };

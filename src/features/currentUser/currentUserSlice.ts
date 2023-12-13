@@ -20,7 +20,7 @@ export const currentUserSlice = createSlice({
     logout: state => {
       state.value = undefined
     },
-    initUser: (state, action: PayloadAction<User>) => {
+    initUser: (state, action: PayloadAction<User | undefined>) => {
       state.value = action.payload
     }
   }
