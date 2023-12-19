@@ -1,14 +1,9 @@
-import { Error } from "parse";
 import Parse from "parse";
+import { Error } from "parse";
 
-export const useSignUp = async (username: string, password: string, email: string | undefined) => {
-  const user = new Parse.User();
-  user.set("username", username);
-  user.set("password", password);
-  if (email) user.set("email", email);
-
+export const useLogin = async (username: string, password: string) => {
   try {
-    return await user.signUp().then((user) => {
+    return await Parse.User.logIn(username, password).then((user) => {
       return {
         username: user.getUsername(),
         email: user.getEmail(),

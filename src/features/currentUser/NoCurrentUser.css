@@ -1,0 +1,53 @@
+.no-current-user-action {
+    list-style-type:none;
+    margin:25px 0 0 0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+
+.no-current-user-action li {
+    float:left;
+    margin:0 5px 0 0;
+   width:100px;
+   height:40px;
+   position:relative;
+}
+
+.no-current-user-action label, .no-current-user-action input {
+   display:block;
+   position:absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+}
+
+.no-current-user-action input[type="radio"] {
+   opacity:0.011;
+   z-index:100;
+}
+
+.no-current-user-action label {
+    padding:5px;
+    border:1px solid #CCC; 
+    cursor:pointer;
+   z-index:90;
+}
+
+.no-current-user-action label:hover {
+    background:#DDD;
+    color: black
+}
+
+.form-label, .unselected-label {
+    color: white
+}
+
+.selected-label {
+    color:black
+}
+
+.selected-radio + label {
+   background:white;
+}
