@@ -37,3 +37,8 @@
   z-index: 10;
   text-align: left;
 }
+
+.user-icon {
+  text-decoration: none; 
+  color: white; 
+}
