@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { CurrentUser } from "./features/currentUser/CurrentUser";
-import { Navbar } from "./navigation/Navbar";
+import { Navbar } from "./features/navigation/Navbar";
 import { Pics } from "./pages/Pics";
 import Parse from "parse";
 

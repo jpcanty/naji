@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
-import { initUser } from "../features/currentUser/currentUserSlice";
-import { useGetCurrentUser } from "../hooks/useGetCurrentUser";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { initUser } from "../currentUser/currentUserSlice";
+import { useGetCurrentUser } from "../../hooks/useGetCurrentUser";
 
 export const UserIcon = () => {
   const light = true;

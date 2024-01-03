@@ -1,4 +1,4 @@
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { NavbarDowpdown } from "./NavbarDropdown";
 import { NavbarLinks } from "./NavbarLinks";
 import "./Navbar.css";
