@@ -14,7 +14,7 @@ const initialState: CurrentUserState = {
 }
 
 export const currentUserSlice = createSlice({
-  name: 'counter',
+  name: 'currentUser',
   initialState,
   reducers: {
     logout: state => {

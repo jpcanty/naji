@@ -7,7 +7,7 @@ type Props = {
 
 export const FullscreenNav = ({ onClick }: Props) => {
   return (
-    <div className="fullscreen">
+    <div className="nav-fullscreen">
       <div className="nav-container">
         <div className="nav-left" />
         <div className="nav-right">

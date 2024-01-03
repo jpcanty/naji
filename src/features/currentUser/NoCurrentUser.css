@@ -25,14 +25,14 @@
 
 .no-current-user-action input[type="radio"] {
    opacity:0.011;
-   z-index:100;
+   z-index:90;
 }
 
 .no-current-user-action label {
     padding:5px;
     border:1px solid #CCC; 
     cursor:pointer;
-   z-index:90;
+   z-index:100;
 }
 
 .no-current-user-action label:hover {
