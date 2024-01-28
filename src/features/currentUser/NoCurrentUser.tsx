@@ -74,7 +74,7 @@ export const NoCurrentUser = () => {
     event.preventDefault();
     if (signingUp) {
       if (validateSignUp(user)) {
-        useSignUp(user.username, user.password, user.email).then((user) => {
+        useSignUp(user.username, user.password, user.email, user.firstName, user.lastName).then((user) => {
           if (user) dispatch(initUser(user));
         });
       } else {

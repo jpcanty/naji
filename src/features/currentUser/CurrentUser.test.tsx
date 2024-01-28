@@ -36,11 +36,25 @@ describe("No user defined", () => {
 
 describe("User defined", () => {
   const initialState = {
-    currentUser: { value: { username: "lenjai", email: "lenaji@tancy.com" } },
+    currentUser: { value: { username: "lenjai", email: "lenaji@tancy.com"} },
   };
   const mockStore = configureStore();
   let store, wrapper;
 
+  it('Shows "Youre logged in with first name"', () => {
+    store = mockStore({...initialState,  currentUser: {value: {...initialState.currentUser.value, firstName: "Jelani", lastName: "Canty" }}});
+    render(
+      <Provider store={store}>
+        <CurrentUser />
+      </Provider>
+    );
+
+    const h1Element = screen.getByRole("heading");
+    const buttonElement = screen.getByRole("button");
+    expect(h1Element.textContent).toBe("You're signed in Jelani");
+    expect(buttonElement.textContent).toBe("Log out");
+  });
+  
   it('Shows "Youre logged in"', () => {
     store = mockStore(initialState);
     render(

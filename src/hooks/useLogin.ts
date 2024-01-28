@@ -7,6 +7,8 @@ export const useLogin = async (username: string, password: string) => {
       return {
         username: user.getUsername(),
         email: user.getEmail(),
+        firstName: user.get("firstName"),
+        lastName: user.get("lastName")
       };
     });
     // Hooray! Let them use the app now.

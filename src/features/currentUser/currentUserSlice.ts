@@ -4,6 +4,8 @@ import type { RootState } from '../../store'
 type User = {
     username: string | undefined;
     email: string | undefined;
+    firstName: string | undefined;
+    lastName: string | undefined;
 }
 // Define a type for the slice state
 interface CurrentUserState {
