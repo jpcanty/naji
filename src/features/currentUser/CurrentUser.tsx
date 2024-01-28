@@ -22,7 +22,7 @@ export const CurrentUser = () => {
     <div className="page">
       {isSignedIn ? (
         <div>
-          <h1>You're signed in</h1>
+          <h1>You're signed in {currentUser.firstName}</h1>
           <button onClick={onLogout}>Log out</button>
         </div>
       ) : (

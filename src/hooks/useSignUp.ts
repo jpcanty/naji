@@ -1,10 +1,12 @@
 import { Error } from "parse";
 import Parse from "parse";
 
-export const useSignUp = async (username: string, password: string, email: string | undefined) => {
+export const useSignUp = async (username: string, password: string, email: string | undefined,  firstName: string | undefined,  lastName: string | undefined) => {
   const user = new Parse.User();
   user.set("username", username);
   user.set("password", password);
+  user.set("firstName", firstName);
+  user.set("lastName", lastName);
   if (email) user.set("email", email);
 
   try {
@@ -12,6 +14,8 @@ export const useSignUp = async (username: string, password: string, email: strin
       return {
         username: user.getUsername(),
         email: user.getEmail(),
+        firstName: user.get("firstName"),
+        lastName: user.get("lastName")
       };
     });
     // Hooray! Let them use the app now.
